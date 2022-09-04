@@ -5,6 +5,13 @@ from streamlit_option_menu import option_menu
 
 @st.cache(suppress_st_warning=True)
 def predict_diabetes(diab_features):
+    '''
+    function to commpute the probability of a person having diabetes given features/params of model as a list
+	Parameters:
+	- diab_features (List) : This can be an array/list of features/params as a model inputs
+      Sample Param Order: [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]
+	Returns : A probab score which tells scale of diabetes
+	'''
     diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
     diab_prediction = diabetes_model.predict([diab_features])
     return diab_prediction
@@ -12,6 +19,13 @@ def predict_diabetes(diab_features):
 
 @st.cache(suppress_st_warning=True)
 def predict_heart_disease(heart_features):
+    '''
+    function to commpute the probability of a person having heart disease given features/params of model as a list
+	Parameters:
+	- heart_features (List) : This can be an array/list of features/params as a model inputs
+      Sample Param Order: [age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]
+	Returns : A probab score which tells scale of heart disease
+	'''
     heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
     heart_prediction = heart_disease_model.predict([heart_features])
     return heart_prediction
@@ -19,6 +33,13 @@ def predict_heart_disease(heart_features):
 
 @st.cache(suppress_st_warning=True)
 def predict_parkinsons(parkinsons_features):
+    '''
+    function to commpute the probability of a person having parkinsons given features/params of model as a list
+	Parameters:
+	- parkinsons_features (List) : This can be an array/list of features/params as a model inputs
+      Sample Param Order: [fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]
+	Returns : A probab score which tells scale of parkinsons
+	'''
     parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
     parkinsons_prediction = parkinsons_model.predict([parkinsons_features])                      
     return parkinsons_prediction
