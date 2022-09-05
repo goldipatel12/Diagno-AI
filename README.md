@@ -1,4 +1,4 @@
-# Diagno-AI
+# Diagno.AI
 
 Diagno.AI is an integrated end to end Artificial Intelligence application for the people who instantly need preliminary medical diagnosis. The inspiration for my idea comes while solving the problem: There are millions of people in this world without access to proper healthcare and preliminary medical diagnosis. And in effort to solve this problem was born Diagno.AI - An Artificial Intelligence based Preliminary Diagnosis Platform for patients around the world!
 
